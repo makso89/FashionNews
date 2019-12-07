@@ -1,0 +1,561 @@
+/*!
+Theme Name: FashionNews
+Author: Marko Jankovic
+Description: Fashion News is a simple WordPress theme for small blogs.
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: fashionnews
+Tags: custom-logo, featured-images, threaded-comments
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+FashionNews is based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+*/
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+/*
+* — WordPress Core  —
+* — MAIN SETTINGS  —
+* — TOP BAR AND SOCIAL ICONS  —
+* — NAVIGATION AND LOGO   —
+* — SHOWCASE AREA  —
+* — POST CARD STYLE —
+* — WIDGETS —
+* — FOOTER  —
+* — COMMENTS  —
+* — RESPONSIVE DESIGN  —
+*/
+
+
+/* =WordPress Core
+-------------------------------------------------------------- */
+.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+.aligncenter,
+div.aligncenter {
+    display: block;
+    margin: 5px auto 5px auto;
+}
+
+.alignright {
+    float: right;
+    margin: 5px 0 20px 20px;
+}
+
+.alignleft {
+    float: left;
+    margin: 5px 20px 20px 0;
+}
+
+a img.alignright {
+    float: right;
+    margin: 5px 0 20px 20px;
+}
+
+a img.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+a img.alignleft {
+    float: left;
+    margin: 5px 20px 20px 0;
+}
+
+a img.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.wp-caption {
+    background: #fff;
+    border: 1px solid #f0f0f0;
+    max-width: 96%;
+    /* Image does not overflow the content area */
+    padding: 5px 3px 10px;
+    text-align: center;
+}
+
+.wp-caption.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignleft {
+    margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignright {
+    margin: 5px 0 20px 20px;
+}
+
+.wp-caption img {
+    border: 0 none;
+    height: auto;
+    margin: 0;
+    max-width: 98.5%;
+    padding: 0;
+    width: auto;
+}
+
+.wp-caption p.wp-caption-text {
+    font-size: 11px;
+    line-height: 17px;
+    margin: 0;
+    padding: 0 4px 5px;
+}
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute !important;
+    width: 1px;
+    word-wrap: normal !important;
+    /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+}
+
+.screen-reader-text:focus {
+    background-color: #eee;
+    clip: auto !important;
+    clip-path: none;
+    color: #444;
+    display: block;
+    font-size: 1em;
+    height: auto;
+    left: 5px;
+    line-height: normal;
+    padding: 15px 23px 14px;
+    text-decoration: none;
+    top: 5px;
+    width: auto;
+    z-index: 100000;
+    /* Above WP toolbar. */
+}
+
+/*
+* ============ UNDERSCORE FEATURES ==============
+*/
+
+.sticky {
+    display: block;
+}
+
+.bypostauthor {
+    display: block;
+}
+
+.gallery-caption {
+    display: block;
+}
+
+/*
+* ============ MAIN SETTINGS ==============
+*/
+
+html,
+body {
+    margin: 0 !important;
+    padding: 0 !important;
+    font-family: 'Josefin Sans', sans-serif;
+    color: black;
+    font-size: 16px;
+}
+
+a,
+a:hover {
+    text-decoration: none;
+    color: black;
+}
+
+.site-content {
+    overflow-x: hidden;
+}
+
+/*
+* ===========  TOP BAR AND SOCIAL ICONS ==============
+*/
+
+.top-bar {
+    background: black;
+    height: 50px;
+    width: 100%;
+}
+
+.custom-social {
+    font-size: 15px;
+}
+
+.custom-social,
+.custom-social a,
+.custom-search-box a {
+    color: beige;
+}
+
+.search-bar {
+    border-radius: 10px;
+    background-color: #3e3d3d;
+    color: white;
+    transition: 0.5s all;
+    border: none;
+    margin-top: 10px;
+}
+
+.search-bar:hover {
+    background-color: beige;
+    color: black;
+    transition: 0.5s all;
+}
+
+.fab,
+.fas {
+    margin: 15px;
+    transition: 0.5s all;
+}
+
+.fa-facebook-f:hover {
+    color: #3b5998;
+    transition: 0.5s all;
+}
+
+.fa-instagram:hover {
+    color: #c32aa3;
+    transition: 0.5s all;
+}
+
+.fa-twitter:hover {
+    color: #1da1f2;
+    transition: 0.5s all;
+}
+
+.fa-pinterest:hover {
+    color: #c8232c;
+    transition: 0.5s all;
+}
+
+/*
+* ============ NAVIGATION AND LOGO ============
+*/
+
+.nav-logo {
+    width: 150px;
+}
+
+.nav-link {
+    color: black;
+    text-transform: uppercase;
+    margin-left: 25px !important;
+}
+
+.nav-link:hover {
+    color: rgb(100, 100, 100);
+}
+
+.custom-nav-bg {
+    background: rgba(255, 255, 255, 0.97);
+}
+
+.dropdown:hover > .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu {
+    box-shadow: 2px 4px 4px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 5%;
+}
+
+.dropdown-item {
+    color: black;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.dropdown-item:hover {
+    background-color: white !important;
+    color: rgb(73, 73, 73);
+}
+
+/*
+* ============ SHOWCASE AREA ============
+*/
+
+
+.custom-header-img {
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: hidden !important;
+}
+
+.img-custom {
+    transition: transform .6s;
+    width: 100%;
+    max-height: 450px;
+}
+
+.img-custom:hover {
+    transform: scale(1.2);
+}
+
+.custom-card {
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    overflow: hidden;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/*
+* ============ POST CARD STYLE ============
+*/
+
+.post-section {
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+.section-title {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.section-title .title {
+    position: relative;
+    display: inline-block;
+    background-color: #fff;
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-right: 10px;
+    z-index: 20;
+}
+
+.section-title:after {
+    content: "";
+    display: inline-block;
+    height: 2px;
+    background-color: #e8eaed;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 10px;
+    z-index: 10;
+}
+
+.meta-data {
+    margin: 5px;
+}
+
+.main-post-content p {
+    font-size: 16px;
+}
+
+.card-img-top {
+    max-height: 250px;
+}
+
+.card {
+    border: none;
+}
+
+/*
+* — Meta —
+*/
+
+.text-muted a {
+    color: white;
+    text-decoration: none;
+    background-color: cornflowerblue;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+/*
+* — Pagination —
+*/
+
+.pagination {
+    background-color: cornflowerblue;
+}
+
+.pagination a {
+    padding: 5px;
+    color: whitesmoke;
+}
+
+
+/*
+* ============ WIDGETS ============
+*/
+.widget-title {
+    text-transform: uppercase;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+#wp-calendar {
+    width: 100%;
+}
+
+/*
+* ============ FOOTER ============
+*/
+
+.footer-widget-area {
+    color: white;
+}
+
+.footer-widget-area a {
+    color: white;
+}
+
+/*
+* ============ COMMENTS ============
+*/
+
+.submit {
+    background-color: #272420;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: white;
+}
+
+.page-numbers {
+    background-color: #272420;
+    padding: 6px 8px;
+    color: white;
+    border-radius: 50%;
+    font-size: 14px;
+}
+
+.page-numbers:hover {
+    color: white;
+}
+
+.reply,
+.next,
+.prev {
+    background-color: #272420;
+    border-radius: 5px;
+    padding: 5px 10px;
+    width: 60px;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.next {
+    color: white;
+}
+
+.reply a {
+    color: white;
+}
+
+.comment {
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    list-style-type: none;
+}
+
+#comment {
+    width: 100%;
+}
+
+#reply-title {
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+#wp-comment-cookies-consent {
+    margin-right: 5px;
+}
+
+
+
+/*
+* ============ RESPONSIVE DESIGN ============
+*/
+
+@media(max-width: 990px) {
+    .dropdown-menu {
+        display: block;
+        box-shadow: none;
+        border: none;
+        margin-left: 15px;
+    }
+
+    .dropdown-item {
+        font-size: 12px;
+    }
+
+    .card-img-top {
+        max-height: 350px;
+    }
+
+}
+
+@media (max-width: 790px) {
+    .img-custom {
+        max-height: 350px;
+    }
+
+    .single-post-title,
+    .main-post-content {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .post-category-links {
+        margin-left: 8px;
+    }
+
+    .nav-logo {
+        display: none;
+    }
+
+    .fab,
+    .fas {
+        margin: 15px 5px;
+    }
+}
+
+@media(max-width: 640px) {
+    .card-img-top {
+        max-height: 250px;
+    }
+
+    .img-custom {
+        max-height: 250px;
+    }
+
+    p iframe {
+        width: 100%;
+        height: 220px;
+    }
+
+}
+
+
+@media(max-width: 340px) {
+    .custom-logo {
+        width: 150px !important;
+    }
+
+    p iframe {
+        width: 280px;
+        height: 180px;
+    }
+}
